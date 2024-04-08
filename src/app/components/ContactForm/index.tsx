@@ -29,7 +29,7 @@ export default function ContactForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/contact",
+        "https://react-server-chi.vercel.app/contact",
         { fullname, email, message },
         { headers: { "Content-Type": "application/json" } }
       );

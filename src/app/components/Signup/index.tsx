@@ -43,7 +43,7 @@ const Signup = () => {
     };
     try {
       const response = await axios.post(
-        'http://localhost:3001/register',
+        'https://react-server-chi.vercel.app/register',
         data,
         config
       );

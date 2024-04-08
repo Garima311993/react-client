@@ -30,7 +30,7 @@ const Data = () => {
             try {
                 const id = localStorage.getItem('_id');
                 if (id) {
-                    const response = await axios.get(`http://localhost:3001/user/users/${id}`);
+                    const response = await axios.get(`https://react-server-chi.vercel.app/user/users/${id}`);
                     const userData = response.data;
                     setFormData({
                         username: userData.username || '',
@@ -55,7 +55,7 @@ const Data = () => {
     const deleteuser = async () => {
         try {
             const id = localStorage.getItem('_id');
-            const response = await axios.delete(`http://localhost:3001/user/users/${id}`);
+            const response = await axios.delete(`https://react-server-chi.vercel.app/user/users/${id}`);
             auth.logout();
             // localStorage.removeItem('token');
             // localStorage.removeItem('_id');
@@ -108,7 +108,7 @@ const Data = () => {
             console.log("3");
             console.log("the new password is");
             console.log(password);
-            const response = await axios.post(`http://localhost:3001/user/users/${id}`, updatedUserData, config);
+            const response = await axios.post(`https://react-server-chi.vercel.app/user/users/${id}`, updatedUserData, config);
             console.log('User updated successfully:', response.data);
            
             setFormData({ ...formData, cpassword: response.data.password, password: '' });

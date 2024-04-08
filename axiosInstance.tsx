@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = "http://localhost:3001/"; // Assuming you have BASE_URL in your .env file
+const baseURL = "https://react-server-chi.vercel.app/"; // Assuming you have BASE_URL in your .env file
 
 const axiosInstance = axios.create({
 baseURL ,

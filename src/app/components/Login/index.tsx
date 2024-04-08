@@ -63,7 +63,7 @@ const Login = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:3001/login',
+          'https://react-server-chi.vercel.app/login',
           data,
           config
         );
